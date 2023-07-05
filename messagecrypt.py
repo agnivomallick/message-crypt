@@ -43,10 +43,6 @@ def main_screen():
     icon_img = PhotoImage(file="lockandkey.png")
     screen.iconphoto(False, icon_img)
     screen.title("MessageCryptor")
-
-    def reset():
-        code.set("")
-        text1.delete(1.0, END)
     Label(text="Enter text to encrypt or decrypt", fg="black", font=("calibri", 13)).place(x=10, y=10)
     text1 = Text(font="Robote 15", bg="white", relief=GROOVE, wrap=WORD, bd=0)
     text1.place(x=10, y=50, width=355, height=120)
