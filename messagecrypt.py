@@ -71,6 +71,9 @@ def main_screen():
     screen.iconphoto(False, icon_img)
     screen.title("MessageCryptor")
 
+    def reset():
+        code.set("")
+        text1.delete(1.0, END)
 
     Label(text="Enter text to encrypt or decrypt", fg="black", font=("calibri", 13)).place(x=10, y=10)
     text1 = Text(font="Robote 15", bg="white", relief=GROOVE, wrap=WORD, bd=0)
@@ -83,6 +86,7 @@ def main_screen():
 
     Button(text="ENCRYPT", height=2, width=23, bg="red", fg="white", bd=0, command=encrypt).place(x=10, y=250)
     Button(text="DECRYPT", height=2, width=23, bg="#59c11f", fg="white", bd=0, command=decrypt).place(x=200, y=250)
+    Button(text="RESET", height=2, width=50, bg="blue", fg="white", bd=0, command=reset).place(x=10, y=300)
 
     screen.mainloop()
 
